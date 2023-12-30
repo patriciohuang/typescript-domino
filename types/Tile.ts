@@ -5,4 +5,10 @@ export default class Tile {
     this.end1 = end1;
     this.end2 = end2;
   }
+  flip() {
+    [this.end1, this.end2] = [this.end2, this.end1];
+  }
+  toString() {
+    return `<${this.end1}, ${this.end2}>`
+  }
 }

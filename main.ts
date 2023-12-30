@@ -1,6 +1,5 @@
-import Stock from "./types/Stock";
+import Game from "./types/Game";
 
-const stock = new Stock();
-console.log(stock.tiles);
-stock.shuffle();
-console.log(stock.tiles);
+const game = new Game('Alice', 'Bob');
+game.initialize();
+game.play();

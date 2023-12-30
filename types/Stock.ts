@@ -16,4 +16,15 @@ export default class Stock {
       [this.tiles[i], this.tiles[j]] = [this.tiles[j], this.tiles[i]];
     }
   }
+  size() {
+    return this.tiles.length
+  }
+  draw(): Tile {
+    const tile = this.tiles.pop();
+    if (tile) {
+      return tile
+    } else {
+      throw new Error(`There are no more tiles to draw.`)
+    }
+  }
 }
