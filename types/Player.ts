@@ -11,15 +11,15 @@ export default class Player {
   }
   drawInitialTiles (stock: Stock) {
     if (stock.size() >= 7){
-      for (let i = 1; i < 7; i++) {
+      for (let i = 1; i <= 7; i++) {
         this.hand.push(stock.draw());
       }
     } else {
-      throw Error('No enough tiles available to draw the initial tiles')
+      throw Error('No enough tiles available to draw the initial tiles');
     }
   }
   play (board: Board, stock: Stock) {
-    let playableTile = this.hand.find(handTile => board.playableEnd1(handTile) || board.playableEnd2(handTile))
+    let playableTile = this.hand.find(handTile => board.playableEnd1(handTile) || board.playableEnd2(handTile));
     while (!playableTile && stock.size() > 0) {
       const newTile = stock.draw();
       this.hand.push(newTile);
@@ -31,10 +31,10 @@ export default class Player {
       const index = this.hand.indexOf(playableTile);
       this.hand.splice(index, 1);
       if (board.playableEnd1(playableTile)) {
-        console.log(`${this.name} plays ${playableTile} to connect to tile ${board.getEnd1Tile()} on the board`)
+        console.log(`${this.name} plays ${playableTile} to connect to tile ${board.getEnd1Tile()} on the board`);
         board.playEnd1(playableTile);
       } else {
-        console.log(`${this.name} plays ${playableTile} to connect to tile ${board.getEnd2Tile()} on the board`)
+        console.log(`${this.name} plays ${playableTile} to connect to tile ${board.getEnd2Tile()} on the board`);
         board.playEnd2(playableTile);
       }
     } else {

@@ -17,14 +17,14 @@ export default class Stock {
     }
   }
   size() {
-    return this.tiles.length
+    return this.tiles.length;
   }
   draw(): Tile {
     const tile = this.tiles.pop();
     if (tile) {
-      return tile
+      return tile;
     } else {
-      throw new Error(`There are no more tiles to draw.`)
+      throw new Error(`There are no more tiles to draw.`);
     }
   }
 }

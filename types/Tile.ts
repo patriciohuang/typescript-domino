@@ -9,6 +9,6 @@ export default class Tile {
     [this.end1, this.end2] = [this.end2, this.end1];
   }
   toString() {
-    return `<${this.end1}, ${this.end2}>`
+    return `<${this.end1}, ${this.end2}>`;
   }
 }

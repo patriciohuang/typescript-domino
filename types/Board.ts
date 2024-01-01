@@ -3,7 +3,7 @@ import Tile from "./Tile";
 export default class Board {
   line: Tile[];
   constructor(firstTile: Tile) {
-    this.line = [firstTile]
+    this.line = [firstTile];
   }
   getEnd1(): Number {
     return this.line[0].end1;
@@ -12,10 +12,10 @@ export default class Board {
     return this.line[this.line.length-1].end2;
   }
   getEnd1Tile(): Tile {
-    return this.line[0]
+    return this.line[0];
   }
   getEnd2Tile(): Tile {
-    return this.line[this.line.length-1]
+    return this.line[this.line.length-1];
   }
   playableEnd1(tile: Tile): boolean {
     return tile.end1 === this.getEnd1() || tile.end2 === this.getEnd1();
@@ -30,7 +30,7 @@ export default class Board {
       tile.flip();
       this.line = [tile, ...this.line];
     } else {
-      throw new Error(`Invalid tile ${tile} to play in end 1 of the line (${this.getEnd1()})`)
+      throw new Error(`Invalid tile ${tile} to play in end 1 of the line (${this.getEnd1()})`);
     }
   }
   playEnd2(tile: Tile) {
@@ -40,10 +40,10 @@ export default class Board {
       tile.flip();
       this.line = [...this.line, tile];
     } else {
-      throw new Error(`Invalid tile ${tile} to play in end 2 of the line (${this.getEnd2()})`)
+      throw new Error(`Invalid tile ${tile} to play in end 2 of the line (${this.getEnd2()})`);
     }
   }
   toString() {
-    return `${this.line.join(', ')}`
+    return `${this.line.join(', ')}`;
   }
 }
