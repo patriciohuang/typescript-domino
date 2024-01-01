@@ -1,6 +1,9 @@
-# TypeScript Domino
+# TypeScript Dominoes
 
 ## Project design
+
+[Figjam](https://www.figma.com/file/gbo1aVm6Z376qzY6F6Ouq3/Typescript-dominoes?type=whiteboard&node-id=0%3A1&t=xywhGs7ZSA4GnR1z-1)
+<img width="1335" alt="image" src="https://github.com/patriciohuang/typescript-domino/assets/125801925/20499d8e-f3fb-4963-9ba5-dbc4d1171549">
 
 ## Getting Started
 
